@@ -5,7 +5,9 @@ object RatingsAnalysis extends App {
 
   //analyzeRatingWithRDD();
 
-  weatherStationMinimumTemperature();
+  //weatherStationMinimumTemperature();
+
+  avgSpendByCustomer()
 
   // read the ratings file and count how many times a rating appears uniquely
   def analyzeRatingWithRDD(): Unit ={
@@ -31,6 +33,18 @@ object RatingsAnalysis extends App {
 
     var minimumByStation=filteredData.map(s=>(s._1,s._3.toFloat)).reduceByKey((x,y)=> if (x<y) x else y);
     minimumByStation.collect().foreach(println)
+
+  }
+
+  def avgSpendByCustomer()={
+
+    val sc= new SparkContext("local[*]","CustomerSpendAverage")
+
+    val customerData=sc.textFile("C:\\Users\\siddhu\\Documents\\spark-scala-training-11202020\\SparkScalaCourse\\SparkScalaCourse\\data\\customer-orders.csv")
+
+    val customerTuple=customerData.map(s=>s.split(",")).map(s=>(s(0),s(2).toFloat)).reduceByKey((x,y)=>x+y)
+
+    customerTuple.collect().foreach(println)
 
   }
 }
