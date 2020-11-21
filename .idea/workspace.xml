@@ -2,9 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d887d7b-c70a-4a1e-ae12-4b8c3a607df8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/regit/caseclass/Book.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/regit/caseclass/Person.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/regit/caseclass/WeatherData.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/regit/impl/DataSetAnalysis.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/regit/impl/RatingsAnalysis.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RatingsAnalysis.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RatingsAnalysis.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RatingsAnalysis.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$analyzeRatingWithRDD$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$avgSpendByCustomer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$$anonfun$weatherStationMinimumTemperature$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RatingsAnalysis.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +37,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Object" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,9 +78,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DataSetAnalysis">
+    <configuration name="DataSetAnalysis" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.regit.impl.DataSetAnalysis" />
+      <module name="recommendationengine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.regit.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RatingsAnalysis" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="RatingsAnalysis" />
+      <option name="MAIN_CLASS_NAME" value="com.regit.impl.RatingsAnalysis" />
       <module name="recommendationengine" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -58,6 +101,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DataSetAnalysis" />
         <item itemvalue="Application.RatingsAnalysis" />
       </list>
     </recent_temporary>

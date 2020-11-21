@@ -1,6 +1,8 @@
+package com.regit.impl
+
 import org.apache.spark.SparkContext
 
-object RatingsAnalysis extends App {
+object RatingsAnalysis {
 
 
   //analyzeRatingWithRDD();
