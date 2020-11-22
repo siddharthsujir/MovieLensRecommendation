@@ -22,7 +22,11 @@ object DataSetAnalysis {
     //minimumTemperatureByWeatherStation(sparkSession)
 
 
-    MovieAnalysis.findMostPopularMovie(sparkSession)
+   // MovieAnalysis.findMostPopularMovie(sparkSession)
+
+   // SuperHeroAnalysis.mostPopularSuperHero(sparkSession);
+
+    SuperHeroAnalysis.mostObscureSuperHero(sparkSession)
 
     //session could be running beyond the lifetime if
     //we dont explicitly stop it
