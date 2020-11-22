@@ -19,7 +19,10 @@ object DataSetAnalysis {
     //friendsByAge(sparkSession)
     //wordCountWithDS(sparkSession)
 
-    minimumTemperatureByWeatherStation(sparkSession)
+    //minimumTemperatureByWeatherStation(sparkSession)
+
+
+    MovieAnalysis.findMostPopularMovie(sparkSession)
 
     //session could be running beyond the lifetime if
     //we dont explicitly stop it
