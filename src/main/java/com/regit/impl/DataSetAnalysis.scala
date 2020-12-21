@@ -26,8 +26,9 @@ object DataSetAnalysis {
 
    // SuperHeroAnalysis.mostPopularSuperHero(sparkSession);
 
-    SuperHeroAnalysis.mostObscureSuperHero(sparkSession)
+    //SuperHeroAnalysis.mostObscureSuperHero(sparkSession)
 
+    MovieSimilarity.conputeSimilarity();
     //session could be running beyond the lifetime if
     //we dont explicitly stop it
     sparkSession.stop();
