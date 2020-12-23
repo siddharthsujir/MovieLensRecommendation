@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d887d7b-c70a-4a1e-ae12-4b8c3a607df8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/regit/caseclass/SuperHeroNames.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/regit/impl/SuperHeroAnalysis.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/regit/impl/DataSetAnalysis.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/regit/impl/DataSetAnalysis.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/regit/caseclass/MoviePair.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/regit/caseclass/MoviePair.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/regit/caseclass/MoviePairSimilarity.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/regit/caseclass/MoviePairSimilarity.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/regit/impl/MovieSimilarity.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/regit/impl/MovieSimilarity.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/recommendationengine.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/regit/impl/DataSetAnalysis$$typecreator12$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/regit/impl/DataSetAnalysis$$typecreator12$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/regit/impl/DataSetAnalysis$$typecreator16$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/regit/impl/DataSetAnalysis$$typecreator16$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/regit/impl/DataSetAnalysis$$typecreator4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/regit/impl/DataSetAnalysis$$typecreator4$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/regit/impl/DataSetAnalysis$$typecreator8$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/regit/impl/DataSetAnalysis$$typecreator8$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/regit/impl/DataSetAnalysis$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/regit/impl/DataSetAnalysis$.class" afterDir="false" />
@@ -44,6 +46,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -106,7 +109,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
