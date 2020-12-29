@@ -15,7 +15,7 @@ object DataSetAnalysis {
       .appName("friendsAnalysis")
       .master("local[*]")
       .getOrCreate();
-
+    sparkSession.sparkContext.setLogLevel("ERROR")
     //friendsByAge(sparkSession)
     //wordCountWithDS(sparkSession)
 

@@ -25,9 +25,9 @@ object MovieSimilarity {
 
 
     var movieSchema = new StructType(Array(
-      StructField("movieID",IntegerType),
-      StructField("title",StringType),
-      StructField("genres",StringType)
+      StructField("MovieID",IntegerType,nullable = true),
+      StructField("Title",StringType,nullable = true),
+      StructField("Genres",StringType,nullable = true)
     ))
 
     var ratings=sparkSession.read
@@ -46,45 +46,45 @@ object MovieSimilarity {
         .load("C:\\Users\\siddhu\\Documents\\spark-scala-training-11202020\\Data\\ml-1m\\movies.dat")
         .as[Movie]
 
-    movieName.show(100)
+    val movies=movieName.filter("MovieID is not null")
+//
+    ratings.show(100)
+    ratings.persist();
+    var rating = ratings.as("ratings1").select("UserID","MovieID","rating")
+      .join(ratings.as("ratings2"),$"ratings1.UserID"===$"ratings2.UserID" && $"ratings1.MovieID"<$"ratings2.MovieID")
+      .select($"ratings1.MovieID".alias("movie1"),
+      $"ratings2.MovieID".alias("movie2"),
+      $"ratings1.rating".alias("rating1"),
+      $"ratings2.rating".alias("rating2"))
+        .as[MoviePair]
 
-//    ratings.show(100)
-//    ratings.persist();
-//    var rating = ratings.as("ratings1").select("UserID","MovieID","rating")
-//      .join(ratings.as("ratings2"),$"ratings1.UserID"===$"ratings2.UserID" && $"ratings1.MovieID"<$"ratings2.MovieID")
-//      .select($"ratings1.MovieID".alias("movie1"),
-//      $"ratings2.MovieID".alias("movie2"),
-//      $"ratings1.rating".alias("rating1"),
-//      $"ratings2.rating".alias("rating2"))
-//        .as[MoviePair]
-//
-//    rating.show(100)
-//    rating.persist()
-//    val moviePairSimilarity=computeSimilarity(sparkSession,rating)
-//
-//    var scoreThreshold=0.97
-//    var coOccurenceThreshold=50.0
-//
-//    val movieId:Int=1
-//
-//    var filteredResults=moviePairSimilarity.filter(
-//      (col("movie1")===movieId|| col("movie2")===movieId) &&
-//      col("score")>scoreThreshold && col("numPairs")>coOccurenceThreshold
-//    )
-//
-//    var results=filteredResults.sort(col("score").desc).take(10)
-//
-//    for(result <-results){
-//      var similarMovieID = result.movie1
-//
-//      if(similarMovieID==movieId)
-//        {
-//          similarMovieID=result.movie2
-//        }
-//
-//      print(getMovieName(sparkSession,movieName,similarMovieID)+" score "+result.score+" numPairs "+result.numPairs+" \n")
-//
-//    }
+    rating.show(100)
+    rating.persist()
+    val moviePairSimilarity=computeSimilarity(sparkSession,rating)
+
+    var scoreThreshold=0.97
+    var coOccurenceThreshold=50.0
+
+    val movieId:Int=1
+
+    var filteredResults=moviePairSimilarity.filter(
+      (col("movie1")===movieId|| col("movie2")===movieId) &&
+      col("score")>scoreThreshold && col("numPairs")>coOccurenceThreshold
+    )
+
+    var results=filteredResults.sort(col("score").desc).take(10)
+
+    for(result <-results){
+      var similarMovieID = result.movie1
+
+      if(similarMovieID==movieId)
+        {
+          similarMovieID=result.movie2
+        }
+
+      print(getMovieName(sparkSession,movies,similarMovieID)+" score "+result.score+" numPairs "+result.numPairs+" \n")
+
+    }
 
   }
 
@@ -107,7 +107,7 @@ object MovieSimilarity {
       .withColumn("yy",col("rating2")*col("rating2"))
       .withColumn("xy",col("rating1")*col("rating2"))
 
-    val calculateSimilarity=pairScore
+    val calculateSimilarity=pairScore.filter("rating1>3 and rating2>3")
       .groupBy("movie1","movie2")
       .agg(
         sum(col("xy")).alias("numerator"),(sqrt(sum(col("xx")))*sqrt(sum(col("yy")))).alias("denominator"),
