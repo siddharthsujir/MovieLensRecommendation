@@ -28,7 +28,10 @@ object DataSetAnalysis {
 
     //SuperHeroAnalysis.mostObscureSuperHero(sparkSession)
 
-    MovieSimilarity.conputeSimilarity();
+   // MovieSimilarity.conputeSimilarity();
+
+    CollaborativeFilteringImplementation.collaborativeFiltering(sparkSession);
+
     //session could be running beyond the lifetime if
     //we dont explicitly stop it
     sparkSession.stop();
