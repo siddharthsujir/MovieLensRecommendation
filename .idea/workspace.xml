@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d887d7b-c70a-4a1e-ae12-4b8c3a607df8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/regit/impl/CollaborativeFilteringImplementation.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/regit/impl/DataSetAnalysis.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/regit/impl/DataSetAnalysis.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/regit/impl/CollaborativeFilteringImplementation.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/regit/impl/CollaborativeFilteringImplementation.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

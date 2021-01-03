@@ -4,6 +4,7 @@ import com.regit.caseclass.Ratings
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 import org.apache.spark.sql.functions.{col,desc};
+import org.apache.spark
 
 object CollaborativeFilteringImplementation {
 
@@ -70,11 +71,22 @@ object CollaborativeFilteringImplementation {
       .withColumn("UserRatingCount",col("count"))
       .select("UserID","UserRatingCount")
 
+
+    //Number of Rated Movie Per user
     rated_Movie_perUser.orderBy(desc("UserRatingCount")).show(100)
 
+
+    //Ratings per movie
+
+    var ratings_per_Movie= distinctRatings.groupBy("MovieID").count()
+      .withColumn("Rating_Count_perMovie",col("count"))
+      .select("MovieID","Rating_Count_perMovie")
+
+    ratings_per_Movie.orderBy(desc("Rating_Count_perMovie")).show(100)
   }
 
-  //Number of Rated Movie Per user
+
+
 
 
 }
